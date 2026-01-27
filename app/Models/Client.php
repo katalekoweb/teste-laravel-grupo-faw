@@ -13,6 +13,6 @@ class Client extends Model
     protected $fillable = ["nome", "telefone","estado"];
 
     protected $casts = [
-        "estado" => 'boolean'
+        "estado" => 'int'
     ];
 }
