@@ -94,4 +94,3 @@ username:admin@admin.com
 password: password
 
 ## Obs: O projeto já vem com alguns clientes cadastrados via seeder.
-## Obs 2: se nao for usar docker, use php artisan no lugar de ./vendor/bin/sail artisan
