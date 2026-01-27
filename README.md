@@ -19,6 +19,8 @@ cd teste-laravel-grupo-faw
 cp .env.example .env
 ```
 
+## Usando o docker com sail - pule esta seção se for usar ambiente local sem docker
+
 ### Instale as dependencias com o composer via docker
 ```bash
 docker run --rm \
@@ -54,8 +56,37 @@ docker run --rm \
 ./vendor/bin/sail npm run build
 ```
 
-### Abra o projeto no navegador
-http://localhost  
+## Usando ambiente local (Xampp, Wamp, etc)
+
+### Instale as dependencias com o composer
+```bash
+composer install
+```
+
+### Gere a chave da aplicação Laravel
+```bash
+php artisan key:generate
+```
+
+### Configure o arquivo .env com as credenciais do seu banco de dados local
+
+### Rode as migrations e seeders
+```bash
+php artisan migrate --seed
+```
+
+### Instale as dependencias npm
+```bash
+npm install
+```
+
+### Compile as dependencias front-end
+```bash
+npm run build
+```
+
+## Abra o projeto no navegador
+http://localhost ou o link do seu ambiente local
 
 ## Clieque em login e utilize a seguinte credencial:
 Login:   
