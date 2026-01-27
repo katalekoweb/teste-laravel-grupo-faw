@@ -46,10 +46,10 @@
                                     <td>{{ $client->id }}</td>
                                     <td>{{ $client->nome }}</td>
                                     <td>{{ $client->telefone }}</td>
-                                    <td>{{ $client->estado }}</td>
+                                    <td>{!! $client->estado == 1 ? '<span class="text-green-500">activo</span>' : 'inactivo' !!}</td>
                                     <td>
                                         <a href="{{ route('clients.edit', $client) }}" class="text-blue-600 hover:text-blue-900">Editar</a>
-                                        
+
                                         <form action="{{ route('clients.destroy', $client) }}" method="POST" style="display: inline;">
                                             @csrf
                                             @method('DELETE')
