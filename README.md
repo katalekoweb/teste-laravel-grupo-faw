@@ -1,34 +1,23 @@
-# Laravel Filament Startup Script for full systems and admins
+# Teste Laravel Grupo FAW
+## Gestão de Clientes
 
-## Packages
-filamentphp - https://filamentphp.com/docs/4.x/introduction/overview  
-spatie/laravel-permission - https://spatie.be/docs/laravel-permission/v6/introduction  
-spatie/laravel-activitylog - https://spatie.be/docs/laravel-activitylog/v4/introduction  
-spatie/laravel-medialibrary - https://spatie.be/docs/laravel-medialibrary/v11/introduction  
-Laravel Excel - https://docs.laravel-excel.com/3.1/getting-started/  
-Laravel DomPdf - https://github.com/barryvdh/laravel-dompdf  
-Laravel Debugbar - https://laraveldebugbar.com/installation/  
-Laravel IDE Helper - https://github.com/barryvdh/laravel-ide-helper  
-Laravel Backup - https://spatie.be/docs/laravel-backup/v9/installation-and-setup  
-Laravel Nocaptcha - https://github.com/anhskohbo/no-captcha  
+## Como instalar e rodar o projeto?
 
-## How to install
+Nota: Este projeto utiliza o Laravel Sail para rodar o ambiente de desenvolvimento com Docker.
+Mas pode ser rodar outro ambiente como Wamp ou Xampp, desde que tenha o PHP 8.3+ e o Composer instalado.
 
-Note: This projects was started with docker. Make sure you have docker installed and running in your machine.
-But you can run with your local php and mysql enviroments without docker.
-
-### clone the repository
+### clone o repositório
 ```bash
-git clone https://github.com/katalekoweb/laravel-filament-startup-with-essentials-packages.git
-cd laravel-filament-startup-with-essentials-packages
+git clone https://github.com/katalekoweb/teste-laravel-grupo-faw.git
+cd teste-laravel-grupo-faw
 ```
 
-### Copy the env file 
+### Copie o arquivo .env.example para .env 
 ```bash
 cp .env.example .env
 ```
 
-### Install the dependencies 
+### Instale as dependencias com o composer via docker
 ```bash
 docker run --rm \
     -u "$(id -u):$(id -g)" \
@@ -38,33 +27,38 @@ docker run --rm \
     composer install --ignore-platform-reqs
 ```
 
-### Run the containers with sail
+### Rode os conatiners com sail
 ```bash
 ./vendor/bin/sail up -d
 ```
 
-### Generate the app key
+### Gere a chave da aplicação Laravel
 ```bash
 ./vendor/bin/sail artisan key:generate
 ```
 
-### Run the migrations and seeders
+### Rode as migrations e seeders
 ```bash
 ./vendor/bin/sail artisan migrate --seed
 ```
 
-### Install npm dependencies
+### Instale as dependencias npm
 ```bash
 ./vendor/bin/sail npm i
 ```
 
-### Buid npm libs
+### Compile as dependencias front-end
 ```bash
 ./vendor/bin/sail npm run build
 ```
 
-### Open the project in your browser
-http://locathost/app  
+### Abra o projeto no navegador
+http://localhost  
+
+## Clieque em login e utilize a seguinte credencial:
 Login:   
 username:admin@admin.com   
 password: password
+
+## Obs: O projeto já vem com alguns clientes cadastrados via seeder.
+## Obs 2: se nao for usar docker, use php artisan no lugar de ./vendor/bin/sail artisan
