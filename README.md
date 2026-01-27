@@ -1,6 +1,8 @@
 # Teste Laravel Grupo FAW
 ## Gestão de Clientes
 
+![Clients Page](./public/images/clients.png)
+
 ## Como instalar e rodar o projeto?
 
 Nota: Este projeto utiliza o Laravel Sail para rodar o ambiente de desenvolvimento com Docker.
