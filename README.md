@@ -6,7 +6,7 @@
 ## Como instalar e rodar o projeto?
 
 Nota: Este projeto utiliza o Laravel Sail para rodar o ambiente de desenvolvimento com Docker.
-Mas pode ser rodar outro ambiente como Wamp ou Xampp, desde que tenha o PHP 8.3+ e o Composer instalado.
+Mas pode se rodar com outro ambiente como Wamp ou Xampp, desde que tenha o PHP 8.3+ e o Composer instalado.
 
 ### clone o repositório
 ```bash
@@ -31,7 +31,7 @@ docker run --rm \
     composer install --ignore-platform-reqs
 ```
 
-### Rode os conatiners com sail
+### Rode os containers com sail
 ```bash
 ./vendor/bin/sail up -d
 ```
@@ -88,7 +88,7 @@ npm run build
 ## Abra o projeto no navegador
 http://localhost ou o link do seu ambiente local
 
-## Clieque em login e utilize a seguinte credencial:
+## Clieque em login e utilize as seguintes credenciais:
 Login:   
 username:admin@admin.com   
 password: password
